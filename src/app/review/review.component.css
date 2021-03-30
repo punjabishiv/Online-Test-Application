@@ -1,0 +1,36 @@
+body {
+    background-color: gray;
+    overflow: auto;
+}
+
+.QuestionAndOptions {
+    background-color: hsl(0, 0%, 80%);
+    margin: 30px;
+    width: 500px;
+    padding: 20px 50px;
+    margin-left: 360px;
+    border-radius: 40px;
+    border: solid;
+    border-color: hsl(0, 0%, 30%);
+    box-shadow: 10px 10px hsl(0, 0%, 30%);
+}
+
+#question {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.NavigationButtons > button {
+    background-color: yellowgreen;
+    color: darkred;
+    border-radius: 10px;
+    border: solid green;
+    font-size: larger;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.NavigationButtons > button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px yellow;
+}

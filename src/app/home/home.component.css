@@ -1,0 +1,25 @@
+.information{
+    margin:20px;
+    border-radius: 30px;
+}
+
+.left-section{
+    width: 400px; 
+    background-color: darkmagenta;
+    padding: 40px;
+    margin-left: 20px;
+    margin-top: -50px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.jumbotron{
+    margin-left: 450px;
+    margin-top: -530px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}

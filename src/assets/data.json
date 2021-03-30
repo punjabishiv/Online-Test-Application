@@ -1,0 +1,201 @@
+[
+    {
+        "id" : 1,
+        "question" : "How do you insert COMMENTS in Python code?", 
+        "option1" : "//This is comment",
+        "option2" : "/*This is comment*/",
+        "option3" : "#This is comment",
+        "option4" : "None of these",
+        "answer" : "#This is comment"
+    },
+    
+    {
+        "id" : 2,
+        "question" : "Which one is NOT a legal variable name?", 
+        "option1" : "_myvar",
+        "option2" : "Myvar",
+        "option3" : "my-var",
+        "option4" : "myvar",
+        "answer" : "my-var"
+    },
+
+    {
+        "id" : 3,
+        "question" : "How do you create a variable with the numeric value 5?", 
+        "option1" : "x=int(5)",
+        "option2" : "x=5",
+        "option3" : "Both",
+        "option4" : "None",
+        "answer" : "Both"
+    },
+
+    {
+        "id" : 4,
+        "question" : "What is the correct file extension for Python files?", 
+        "option1" : ".py",
+        "option2" : ".pyth",
+        "option3" : ".pyt",
+        "option4" : ".pt",
+        "answer" : ".py"
+    },
+
+    {
+        "id" : 5,
+        "question" : "What is the correct way to create a function in Python?", 
+        "option1" : "def myFunction()",
+        "option2" : "function myFunction()",
+        "option3" : "create myFunction()",
+        "option4" : "All are correct",
+        "answer" : "def myFunction()"
+    },
+
+    {
+        "id" : 6,
+        "question" : "Is Python case sensitive when dealing with identifiers?",
+        "option1" : "yes",
+        "option2" : "no",
+        "option3" : "machine dependent",
+        "option4" : "none of the mentioned",
+        "answer" : "yes"
+    },
+
+    {
+        "id" : 7,
+        "question" : "Which of the following is an invalid variable?",
+        "option1" : "my_string_1",
+        "option2" : "1st_string",
+        "option3" : "foo",
+        "option4" : "_",
+        "answer" : "1st_string"
+    },
+
+    {
+        "id" : 8,
+        "question" : "Which of the following is not mutable?",
+        "option1" : "String",
+        "option2" : "Tuple",
+        "option3" : "Both of these",
+        "option4" : "None of these",
+        "answer" : "Both of these"
+    },
+
+    {
+        "id" : 9,
+        "question" : "All keywords in Python are in _________",
+        "option1" : "lower case",
+        "option2" : "UPPER CASE",
+        "option3" : "Capitalized",
+        "option4" : "None of these",
+        "answer" : "None of these"
+    },
+
+    {
+        "id" : 10,
+        "question" : "Which of the following is an invalid statement?",
+        "option1" : "abc = 1,000,000",
+        "option2" : "a b c = 1000 2000 3000",
+        "option3" : "a,b,c = 1000, 2000, 3000",
+        "option4" : "a_b_c = 1,000,000",
+        "answer" : "a b c = 1000 2000 3000"
+    },
+
+    {
+        "id" : 11,
+        "question" : "Which of these in not a core data type?",
+        "option1" : "List",
+        "option2" : "Dictionary",
+        "option3" : "Tuple",
+        "option4" : "Class",
+        "answer" : "Class"
+    },
+
+    {
+        "id" : 12,
+        "question" : "Given a function that does not return any value, What value is thrown by default when executed in shell?",
+        "option1" : "int",
+        "option2" : "bool",
+        "option3" : "void",
+        "option4" : "None",
+        "answer" : "None"
+    },
+
+    {
+        "id" : 13,
+        "question" : "In order to store values in terms of key and value we use what core data type?",
+        "option1" : "List",
+        "option2" : "Dictionary",
+        "option3" : "Tuple",
+        "option4" : "Class",
+        "answer" : "Dictionary"
+    },
+
+    {
+        "id" : 14,
+        "question" : "What does ~4 evaluate to?",
+        "option1" : "-5",
+        "option2" : "-4",
+        "option3" : "-3",
+        "option4" : "+3",
+        "answer" : "-5"
+    },
+
+    {
+        "id" : 15,
+        "question" : "Which is the correct operator for power(x,y)?",
+        "option1" : "x^y",
+        "option2" : "x^^y",
+        "option3" : "x**y",
+        "option4" : "None of these",
+        "answer" : "x**y"
+    },
+
+    {
+        "id" : 16,
+        "question" : "If the sum of ages of A, B and C is 80. What was their sum of ages before 3 years?",
+        "option1" : "71",
+        "option2" : "80",
+        "option3" : "70",
+        "option4" : "75",
+        "answer" : "71"
+    },
+
+    {
+        "id" : 17,
+        "question" : "What is the answer to this expression, 22 % 3 is?",
+        "option1" : "7",
+        "option2" : "1",
+        "option3" : "0",
+        "option4" : "5",
+        "answer" : "1"
+    },
+
+    {
+        "id" : 18,
+        "question" : "What is the middle colour of rainbow?",
+        "option1" : "Violet",
+        "option2" : "Red",
+        "option3" : "Green",
+        "option4" : "Yellow",
+        "answer" : "Green"
+    },
+
+    {
+        "id" : 19,
+        "question" : "Does Python support OOP?",
+        "option1" : "Yes",
+        "option2" : "No",
+        "option3" : "Not Sure",
+        "option4" : "None of these",
+        "answer" : "Yes"
+    },
+
+    {
+        "id" : 20,
+        "question" : "What is the complimentary colour of Yellow?",
+        "option1" : "Red",
+        "option2" : "Blue",
+        "option3" : "Violet",
+        "option4" : "Silver",
+        "answer" : "Violet"
+    }
+]

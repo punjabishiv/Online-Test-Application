@@ -1,0 +1,112 @@
+<body>
+    
+
+
+<div style="text-align:center" id="root">
+    <br>
+    <h2>
+        <strong style="text-shadow: 0 5px 15px white; 
+        color: darkred;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: xx-large;">Online Test Application</strong>     
+    </h2> 
+</div>
+
+<br>
+
+
+<ng-container *ngFor="let que of questions">
+    <div *ngIf="+[que.id]==current" class="QuestionAndOptions">
+        <label id="question">{{que.id}}. {{que.question}}</label>
+
+        <br><br>
+
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="options" [(ngModel)]="UserAnswer" >
+        
+            <mat-radio-button class="example-radio-button" [value]="que.option1">
+                {{que.option1}}
+            </mat-radio-button>
+        <br>
+            <mat-radio-button class="example-radio-button" [value]="que.option2">
+                {{que.option2}}
+            </mat-radio-button>
+        <br>
+            <mat-radio-button class="example-radio-button" [value]="que.option3">
+                {{que.option3}}
+            </mat-radio-button>
+        <br>
+            <mat-radio-button class="example-radio-button" [value]="que.option4">
+                {{que.option4}}
+            </mat-radio-button>
+
+        </mat-radio-group>
+
+        <br><br><br>
+        <div style="font-size: large;">Your Saved Answer is: <strong style="color: brown; font-size: larger;">{{SavedUserAnswers[current-1]}}</strong></div>
+    </div>    
+</ng-container>
+
+
+<div class="NavigationButtons">
+<button type="submit" (click)="DecrementCurrent()" style="margin-left: 150px; margin-top: 30px; width: 100px; text-align: center;">Previous</button>
+<button type="submit" (click)="ClearSelection()" style="margin-left: -240px; margin-top: -300px ;border-radius: 50%;position: absolute; width: 120px;">Clear<br>Selection</button>
+<button type="submit" (click)="MarkForReview()" style="margin-left: -240px; margin-top: -200px ;border-radius: 50%;position: absolute; width: 120px;">Mark for<br>Review</button>
+<button type="submit" (click)="SaveAnswer()" style="font-weight: bolder; margin-left: 160px;">Save Answer</button>
+<button type="submit" (click)="IncrementCurrent()" style="margin-left: 160px;width: 100px; text-align: center;">Next</button>
+
+<button type="submit" (click)="CalculateScore()" style="margin-left: 330px; margin-top: -480px; position: absolute;" routerLink='/result'>Submit Quiz</button>
+</div>
+
+<br>
+
+<div class="QuestionButtons">
+    <strong style="text-align: center;">>>> Navigation Buttons:</strong>
+    <br>
+    <ng-container *ngFor="let no of NumberArray">
+
+        <button *ngIf="ScoreArray[no-1]==0" style="background-color: gray;" (click)=GoToQuestion(no)><span *ngIf="no<10">0</span>{{no}}</button>
+        <button *ngIf="ScoreArray[no-1]==1 || ScoreArray[no-1]==-1" style="background-color: hsl(120, 100%, 40%);color: darkred;" (click)=GoToQuestion(no)><span *ngIf="no<10">0</span>{{no}}</button>
+        <span *ngIf="no%5==0"><br></span>
+
+    </ng-container>
+
+    <br>
+    <div style="background-color: gray; height: 20px; width: 120px; 
+    border-radius: 10px;text-align: center; padding: 4px;
+    font-weight: bold; color: white; font-size: medium;
+    border: 2px solid">Not Attempted</div>
+
+<div style="background-color: yellowgreen; height: 20px; width: 120px; 
+border-radius: 10px;text-align: center; padding: 4px;
+font-weight: bold; color: darkred; font-size: medium;
+margin-left: 140px; margin-top: -32px;
+border: solid green;">Attempted</div>
+</div>
+
+<br>
+
+
+<div class="MarkedForReviewButtons" style="margin-left: 1000px; margin-top: 50px; ">
+    <strong style="text-align: center;">>>> Marked for Review:</strong>
+
+    <strong *ngIf="SumOfMarkedForReview()==0" style="text-align: center;">
+        <br>Dear User, you may mark questions by clicking on 
+        <span style="color: darkred; font-weight: bolder;">"Mark for Review"</span> button.</strong>
+    
+        <br>
+    <ng-container class="MarkedForReviewButtons" *ngFor="let no of NumberArray">
+        <button *ngIf="MarkedForReviewArray[no-1]==1" style="background-color: purple;" (click)=GoToQuestion(no)><span *ngIf="no<10">0</span>{{no}}</button>
+    </ng-container>
+</div>
+
+<mat-progress-spinner mode="determinate" value={{ProgressSpinnerValue}} style="margin-left: 850px; margin-top: -400px;"></mat-progress-spinner>
+<span style="margin-left: 850px; margin-top: -60px;font-size: x-large;
+ font-weight: bolder;position: absolute; 
+ text-shadow: 0 5px 15px white;text-align: center;">{{ProgressSpinnerValue}} %<br><br><br>Attempted </span>
+
+<span style="
+margin-left: 1050px; margin-top: -200px; position:absolute; font-size: larger; font-weight: bolder;">Time Left</span>
+<countdown [config]="{leftTime:600}" style="
+margin-left: 1050px; margin-top: -180px; position:absolute; font-size: larger; font-weight: bolder; background-color: burlywood;padding: 5px; border-radius: 10px;"></countdown>
+
+</body>

@@ -1,0 +1,52 @@
+<body>
+    
+
+
+    <div style="text-align:center" id="root">
+        <br>
+        <h2>
+            <strong style="text-shadow: 0 5px 15px white; 
+            color: darkred;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;">Correct Answers</strong>     
+        </h2>
+        <h2>
+            <strong style="text-shadow: 0 5px 15px white; 
+            color: darkred;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;">[For your Reference]</strong>     
+        </h2> 
+    </div>
+
+    <br>
+
+    <div class="NavigationButtons">
+        <button type="submit" routerLink='/home' style="margin-left: 450px; width: 120px; text-align: center;">Go to Home</button>
+        <button type="submit" routerLink='/quiz' style="margin-left: 170px;width: 120px; text-align: center;">Start Quiz Again</button>
+        
+    </div>
+    
+    
+    <ng-container *ngFor="let que of questions">
+        <div class="QuestionAndOptions">
+            <label id="question">{{que.id}}. {{que.question}}</label>
+
+            <ul>
+                <li>{{que.option1}}</li>
+                <li>{{que.option2}}</li>
+                <li>{{que.option3}}</li>
+                <li>{{que.option4}}</li>
+            </ul>
+    
+            <div style="font-size: large;">Expected Answer: <strong style="color: brown; font-size: larger;">{{que.answer}}</strong></div>
+
+        </div>    
+    </ng-container>
+
+    <div class="NavigationButtons">
+        <button type="submit" routerLink='/home' style="margin-left: 450px; width: 120px; text-align: center;">Go to Home</button>
+        <button type="submit" routerLink='/quiz' style="margin-left: 170px;width: 120px; text-align: center;">Start Quiz Again</button>
+        
+    </div>
+
+</body>

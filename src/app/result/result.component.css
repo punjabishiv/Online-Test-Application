@@ -1,0 +1,23 @@
+.MaterialList > mat-list-item{
+    color: teal;
+}
+
+body {
+    background-color: gray;
+    overflow: auto;
+}
+
+.NavigationButtons > button {
+    background-color: yellowgreen;
+    color: darkred;
+    border-radius: 10px;
+    border: solid green;
+    font-size: larger;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.NavigationButtons > button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px yellow;
+}

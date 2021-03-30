@@ -1,0 +1,17 @@
+body {
+    background-color: gray;
+}
+
+button {
+    background-color: darkmagenta;
+    color: white;
+    font-size: large;
+}
+
+button:hover {
+    color: yellow;
+}
+
+a:hover {
+    color: red;
+}

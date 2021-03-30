@@ -1,0 +1,99 @@
+<html>
+
+<body>
+    
+<div style="text-align:center" id="root">
+    <br>
+    <h2>
+        <strong style="text-shadow: 0 5px 15px white; 
+        color: darkred;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: xx-large;">Your Results</strong>     
+    </h2> 
+</div>
+
+
+
+<div style="margin-left: 200px;">
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
+        .tg td{background-color:#e8edff;border-color:#aabcfe;border-style:solid;border-width:1px;color:#669;
+          font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{background-color:#b9c9fe;border-color:#aabcfe;border-style:solid;border-width:1px;color:#039;
+          font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-vovd{border-color:#aabcfe;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-yvca{border-color:#aabcfe;text-align:left;vertical-align:middle}
+        .tg .tg-ehe0{background-color:#D2E4FC;border-color:#aabcfe;font-size:18px;text-align:center;vertical-align:middle}
+        .tg .tg-30tz{border-color:#aabcfe;font-size:18px;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-8gtl{background-color:#D2E4FC;border-color:#aabcfe;font-size:18px;font-weight:bold;text-align:left;vertical-align:middle}
+        .tg .tg-02eq{background-color:#D2E4FC;border-color:#aabcfe;font-size:55px;font-weight:bold;text-align:center;
+          text-decoration:none;vertical-align:middle}
+        .tg .tg-aisq{background-color:#D2E4FC;border-color:#aabcfe;font-size:28px;font-weight:bold;text-align:left;vertical-align:middle}
+        .tg .tg-61ih{border-color:#aabcfe;font-size:18px;font-weight:bold;text-align:left;vertical-align:middle}
+        .tg .tg-8094{background-color:#D2E4FC;border-color:#aabcfe;text-align:center;vertical-align:middle}
+        .tg .tg-cy6h{background-color:#D2E4FC;border-color:#aabcfe;font-size:18px;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-3gi0{border-color:#aabcfe;text-align:center;vertical-align:middle}
+        .tg .tg-0tq0{border-color:#aabcfe;font-size:18px;text-align:center;vertical-align:middle}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-yvca"></th>
+            <th class="tg-vovd">Parameter</th>
+            <th class="tg-vovd">Visualisation</th>
+            <th class="tg-vovd">Your Statistics</th>
+            <th class="tg-vovd">Best Possible</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-3gi0"><img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23000000' d='M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z'/%3e%3c/svg%3e" width="30" height="30"></td>
+            <td class="tg-61ih">Total Attempted Questions</td>
+            <td class="tg-0tq0"><mat-progress-spinner value={{SpinnerAttempted}}></mat-progress-spinner></td>
+            <td class="tg-30tz">{{ScoreArray.length-unattempted}}</td>
+            <td class="tg-30tz">{{ScoreArray.length}}</td>
+          </tr>
+          <!-- <tr>
+            <td class="tg-3gi0"><img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23000000' d='M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z'/%3e%3c/svg%3e" width="30" height="30"></td>
+            <td class="tg-61ih">Total Unattempted Questions</td>
+            <td class="tg-0tq0"><mat-progress-spinner value={{SpinnerUnattempted}}></mat-progress-spinner></td>
+            <td class="tg-30tz">{{unattempted}}</td>
+            <td class="tg-30tz">0</td>
+          </tr> -->
+          <tr>
+            <td class="tg-8094"><img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23000000' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'/%3e%3c/svg%3e" alt="Image" width="30" height="30"></td>
+            <td class="tg-8gtl">Correct Answers</td>
+            <td class="tg-ehe0"><mat-progress-spinner value={{SpinnerCorrect}}></mat-progress-spinner></td>
+            <td class="tg-cy6h">{{correctanswers}}</td>
+            <td class="tg-cy6h">{{ScoreArray.length}}</td>
+          </tr>
+          <tr>
+            <td class="tg-3gi0"><img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512'%3e%3cpath fill='%23000000' d='M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z'/%3e%3c/svg%3e" alt="Image" width="30" height="43"></td>
+            <td class="tg-61ih">Wrong Answers</td>
+            <td class="tg-0tq0"><mat-progress-spinner value={{SpinnerWrong}}></mat-progress-spinner></td>
+            <td class="tg-30tz">{{wronganswers}}</td>
+            <td class="tg-30tz">0</td>
+          </tr>
+          <tr>
+            <td class="tg-8094"><img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23000000' d='M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z'/%3e%3c/svg%3e" width="30" height="30"></td>
+            <td class="tg-aisq" style="color: darkred;">Total Score</td>
+            <td class="tg-ehe0"><mat-progress-spinner value={{SpinnerScore}}></mat-progress-spinner></td>
+            <td class="tg-02eq" style="color: darkred;">{{score}}</td>
+            <td class="tg-cy6h">{{ScoreArray.length}}</td>
+          </tr>
+        </tbody>
+        </table>
+</div>
+<div class="NavigationButtons">
+    <button type="submit" routerLink='/home' style="margin-left: 280px; margin-top: 30px; width: 140px; text-align: center;">Go to<br>Home</button>
+    <button type="submit" routerLink='/review' style="margin-left: 170px;width: 140px; text-align: center;">See Correct Answers</button>
+    
+</div>
+
+
+<img src="../../assets/Images/motivation1.png" routerLink='/quiz' style="cursor: pointer;
+height: 340px;border-radius: 30px;margin-left: 900px;margin-top: -400px;position: relative;">
+
+<div style="margin-bottom: 40px;"></div>
+</body>
+</html>

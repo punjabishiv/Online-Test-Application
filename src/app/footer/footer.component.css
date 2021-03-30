@@ -1,0 +1,16 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkmagenta;
+    color: white;
+    text-align: center;
+  }
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
