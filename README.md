@@ -1,27 +1,12 @@
-# OnlineTestApplication
+#Online Test Application in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+The system (Online Test Application) is developed in Angular which can be useful for conducting quizzes, tests and other examinations in a user-friendly manner. The User Interface is easy to understand. Some additional features include the timer, marking a question for reviewing later, clearing the selection, easy navigation using buttons matrix. This system can be used to conduct quizzes and other examinations in an effective and user-friendly manner.
 
-## Development server
+Note: This application is best viewed in 1360x768 screen resolution.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-> How to run this application?
+1. Clone this repository and extract the folder.
+2. Open the folder in your IDE (say, VS Code)
+3. Fire the command "npm install" to install dependencies.
+4. Run the application using the command "ng serve --o". 
+[Note: For step 3 and 4, you need to have NodeJS and Angular CLI installed on your system.]
